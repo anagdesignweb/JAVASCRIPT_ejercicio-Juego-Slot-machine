@@ -103,13 +103,15 @@ function actualizarCredito(){
     document.getElementById("dinero").innerHTML= `<div>${credito}</div>`;
 }
 
-
 function derrota(){
     var audio2=document.getElementById("audio2");
     abrirVelo();       
-    document.getElementById("cuadro_mensaje").insertAdjacentHTML('afterbegin', `<div id="mensaje"> Te has quedado sin vidas </div><br><div id="calavera"><img src="img/pngwing.png" height="50px"></div>`);
+    document.getElementById("cuadro_mensaje").insertAdjacentHTML('afterbegin', `<div id="mensaje">
+<div> Te has quedado sin vidas </div><br><div id="calavera"><img src="img/pngwing.png" height="50px"></div>
+</div>`);
     audio2.src=`audios/final.mp3`;
     audio2.play();
+    inici();
 }
 
 
